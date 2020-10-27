@@ -1,3 +1,7 @@
-fn main() {
-    println!("Hello, world!");
+mod registers;
+use crate::registers::Registers;
+
+fn main() 
+{
+    println!("regGB started");
 }
