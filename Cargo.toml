@@ -1,0 +1,7 @@
+[package]
+name = "regGB"
+version = "0.1.0"
+authors = ["Jacob Preston <prestja@gmail.com>"]
+edition = "2018"
+
+[dependencies]
