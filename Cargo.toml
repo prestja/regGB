@@ -1,5 +1,5 @@
 [package]
-name = "regGB"
+name = "reg_gb"
 version = "0.1.0"
 authors = ["Jacob Preston <prestja@gmail.com>"]
 edition = "2018"
