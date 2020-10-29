@@ -15,7 +15,7 @@ pub const INSTRUCTIONS: [Instruction; 1] =
     Instruction 
     {
         desc: "nop",
-        bytes: 0,
+        bytes: 1,
         cycles: 4,
         op: CPU::nop
     }

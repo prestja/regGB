@@ -24,7 +24,7 @@ impl CPU
         (next.op)(self);
 
         println!("pc: {} instr: {}", self.pc, next.desc);
-        self.pc = self.pc.wrapping_add(1 + next.bytes as u16);
+        self.pc = self.pc.wrapping_add(next.bytes as u16);
     }
 
     pub fn nop(&mut self)
