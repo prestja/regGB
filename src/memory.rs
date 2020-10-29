@@ -12,4 +12,13 @@ impl Memory
             bytes: [0; 65536]
         }
     }
+
+    pub fn from () -> Memory
+    {
+        let mem = Memory
+        {
+            bytes: [0; 65536]
+        };
+        return mem;
+    }
 }

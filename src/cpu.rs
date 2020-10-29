@@ -19,8 +19,11 @@ impl CPU
 
     pub fn execute(&mut self)
     {
-        let next = &INSTRUCTIONS[0];
+        let b0 = self.memory.bytes[self.pc as usize];
+        let next = &INSTRUCTIONS[b0 as usize];
         (next.op)();
-        self.pc.wrapping_add(1 + next.bytes as u16);
+        
+        println!("pc: {} instr: {}", self.pc, next.desc);
+        self.pc = self.pc.wrapping_add(1 + next.bytes as u16);
     }
 }

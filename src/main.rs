@@ -6,7 +6,6 @@ mod instruction;
 use crate::registers::Registers;
 use crate::cpu::CPU;
 use crate::memory::Memory;
-use crate::instruction::Instruction;
 
 fn main() 
 {

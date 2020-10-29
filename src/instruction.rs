@@ -8,7 +8,7 @@ pub struct Instruction
 
 pub fn nop()
 {
-    println!("nop");
+    
 }
 
 pub const INSTRUCTIONS: [Instruction; 1] = 
