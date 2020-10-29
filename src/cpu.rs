@@ -1,5 +1,6 @@
 use crate::Registers;
 use crate::Memory;
+use crate::instruction::{Instruction, INSTRUCTIONS};
 
 pub struct CPU
 {
@@ -16,8 +17,10 @@ impl CPU
         CPU {pc: 0, sp: 0, registers: Registers::new(), memory: Memory::new()}
     }
 
-    pub fn tick(&self)
+    pub fn execute(&mut self)
     {
-        
+        let next = &INSTRUCTIONS[0];
+        (next.op)();
+        self.pc.wrapping_add(1 + next.bytes as u16);
     }
 }

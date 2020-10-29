@@ -1,18 +1,20 @@
 mod registers;
 mod cpu;
 mod memory;
+mod instruction;
 
 use crate::registers::Registers;
 use crate::cpu::CPU;
 use crate::memory::Memory;
+use crate::instruction::Instruction;
 
 fn main() 
 {
     println!("regGB started");
-    let emulator = CPU::new();
+    let mut emulator = CPU::new();
     
     loop
     {
-        emulator.tick();
+        emulator.execute();
     }
 }
