@@ -21,9 +21,13 @@ impl CPU
     {
         let b0 = self.memory.bytes[self.pc as usize];
         let next = &INSTRUCTIONS[b0 as usize];
-        (next.op)();
-        
+        (next.op)(self);
+
         println!("pc: {} instr: {}", self.pc, next.desc);
         self.pc = self.pc.wrapping_add(1 + next.bytes as u16);
+    }
+
+    pub fn nop(&mut self)
+    {
     }
 }
